@@ -1,0 +1,75 @@
+<?php
+include ("php/conexion.php");// el include es para llamar a un archivo
+include ("php/validarSesion.php") ;
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Social</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="Imagenes/logofb.png" width="400px" alt=""></a>
+        </div>
+        <div class="navegador">
+            <nav class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="miPerfil.html">Mi Perfil</a></li>
+                <li><a href="misFotos.html">Mis Fotos</a></li>
+                <li><a href="misAmigos.html">Mis Amigos</a></li>
+                <li><a href="buscarAmigos.html">Buscar amigos</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <section class="perfil">
+        <img src="Imagenes/perfilhombre.png" alt="">
+        <div class="perfil-info">
+            <h2>Jazir Olivera</h2>
+            <form action="php/subirFoto.php" method="post" enctype="multipart/form-data">
+            Cambiar foto de perfil 
+           <br> <div class="inputs">
+                <input  type="file" name="archivo" id="archivo"  accept=".jpg, .png" required />
+                <input type="submit" name="subir" value="Subir">
+            </div>
+            </form>
+        </div>
+    </section>
+    
+    <h2>Mis fotos</h2>
+    <section class="fotos">        
+        
+        <section class="foto">
+            <img src="Imagenes/foto1.png" alt="">
+        </section>
+        <section class="foto">
+            <img src="Imagenes/foto2.png" alt="">
+        </section>
+        <section class="foto">
+            <img src="Imagenes/foto3.png" alt="">
+        </section>
+        <section class="foto">
+            <img src="Imagenes/foto1.png" alt="">
+        </section>
+        <section class="foto">
+            <img src="Imagenes/foto2.png" alt="">
+        </section>
+        <section class="foto">
+            <img src="Imagenes/foto3.png" alt="">
+        </section>
+    </section>
+    <h3>
+        <form action="php/subirFoto.php" method="post" enctype="multipart/form-data">
+        Subir Foto <input type="file" name="archivo" id="archivo" accept=".jpg, .png" required />
+        <input type="submit" name="subir" value="Subir">
+        </form>
+    </h3>
+</body>
+
+</html>
